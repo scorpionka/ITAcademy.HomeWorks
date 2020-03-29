@@ -3,10 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW03.Task1", "HW03.Task1\HW03.Task1.csproj", "{28B18BFE-B7BA-4603-9A42-8C97E2E3C94C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW03.Task1", "HW03.Task1\HW03.Task1.csproj", "{28B18BFE-B7BA-4603-9A42-8C97E2E3C94C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW03.Task2", "HW03.Task2\HW03.Task2.csproj", "{54B600E3-CD5D-4177-94EF-CB908DA22B7C}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.02", "HW.02\HW.02.csproj", "{235BA651-67FE-4E05-A7B8-76CAB1F2A942}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW03.Task2", "HW03.Task2\HW03.Task2.csproj", "{54B600E3-CD5D-4177-94EF-CB908DA22B7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.02", "HW.02\HW.02.csproj", "{235BA651-67FE-4E05-A7B8-76CAB1F2A942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_08.Task1", "HW_08.Task1\HW_08.Task1.csproj", "{6862303B-3D88-46CE-862B-EA49456D0B9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +29,10 @@ Global
 		{235BA651-67FE-4E05-A7B8-76CAB1F2A942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{235BA651-67FE-4E05-A7B8-76CAB1F2A942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{235BA651-67FE-4E05-A7B8-76CAB1F2A942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6862303B-3D88-46CE-862B-EA49456D0B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6862303B-3D88-46CE-862B-EA49456D0B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6862303B-3D88-46CE-862B-EA49456D0B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6862303B-3D88-46CE-862B-EA49456D0B9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
