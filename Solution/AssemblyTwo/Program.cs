@@ -7,25 +7,67 @@ namespace AssemblyTwo
     {
         static void Main(string[] args)
         {
-            Motorcycle daughterMoto = new Motorcycle();
+            Motorcycle myMoto = new Motorcycle();
 
-            //only public available!
-            daughterMoto.modelPublic = "BMW";
-            Console.WriteLine("public field from another assembly: " + daughterMoto.modelPublic);
-            daughterMoto.mileagePublic = 50_000;
-            Console.WriteLine("public field from another assembly: " + daughterMoto.mileagePublic);
-            Console.Write("\n");
-            //private const in a public method
-            daughterMoto.RacingPublic();
+            //public fields, const and methods are available everywhere
+            Console.WriteLine("Public const, fields, methods:");
+            Console.WriteLine("Max speed = " + Motorcycle.MaxSpeedPublic);
+            Console.WriteLine("Model: " + myMoto.modelPublic);
+            Console.WriteLine("Mileage = " + myMoto.mileagePublic);
+            myMoto.RacingPublic();
+            Console.WriteLine("");
 
-            //only public available!
-            Chopper myWifeChopper = new Chopper();
-            myWifeChopper.modelPublic = "Harley Davidson";
-            Console.WriteLine("\npublic field from another assembly: " + myWifeChopper.modelPublic);
-            Console.WriteLine("public const from another assembly: " + Chopper.MaxSpeedPublic);
-            Console.Write("\n");
-            myWifeChopper.ChopperRacingProtected();
-            myWifeChopper.ChopperRacingProtectedInternal();
+            //protected fields, const and methods aren't available here
+            Console.WriteLine("Protected const, fields, methods aren't accessible from outside the class!");
+            //Console.WriteLine("Max speed = " + Motorcycle.MaxSpeedProtected);
+            //Console.WriteLine("Model: " + myMoto.modelProtected);
+            //Console.WriteLine("Mileage = " + myMoto.mileageProtected);
+            //myMoto.RacingProtected();
+            Chopper myDadMoto = new Chopper();
+            myDadMoto.WhereProtectedAvailableHeir();
+            Console.WriteLine("");
+
+            //internal fields, const and methods aren't available here
+            Console.WriteLine("Internal const, fields, methods aren't available in this assembly!");
+            //Console.WriteLine("Max speed = " + Motorcycle.MaxSpeedInternal);
+            //Console.WriteLine("Model: " + myMoto.modelInternal);
+            //Console.WriteLine("Mileage = " + myMoto.mileageInternal);
+            //myMoto.RacingInternal();
+            Console.WriteLine("");
+
+            //protected internal fields, const and methods aren't available here
+            Console.WriteLine("Protected internal const, fields, methods are available only from the heir class Chopper in this assembly!");
+            //Console.WriteLine("Max speed = " + Motorcycle.MaxSpeedProtectedInternal);
+            //Console.WriteLine("Model: " + myMoto.modelProtectedInternal);
+            //Console.WriteLine("Mileage = " + myMoto.mileageProtectedInternal);
+            //myMoto.RacingProtectedInternal();
+            Chopper myDaughterMoto = new Chopper();
+            myDaughterMoto.WhereProtectedInternalAvailableHeir();
+            Console.WriteLine("");
+
+            //private fields, const and methods aren't available here
+            Console.WriteLine("Private const, fields, methods are available only inside the class Motorcycle!");
+            //Console.WriteLine("Max speed = " + Motorcycle.MaxSpeedPrivate);
+            //Console.WriteLine("Model: " + myMoto.modelPrivate);
+            //Console.WriteLine("Mileage = " + myMoto.mileagePrivate);
+            //myMoto.RacingPrivate();
+            Console.WriteLine("");
+
+            //private protected fields, const and methods aren't available here
+            Console.WriteLine("Private protected const, fields, methods are available only inside the class Motorcycle " +
+                "and heir class Sportbike in their assembly!");
+            //Console.WriteLine("Max speed = " + Motorcycle.MaxSpeedPrivateProtected);
+            //Console.WriteLine("Model: " + myMoto.modelPrivateProtected);
+            //Console.WriteLine("Mileage = " + myMoto.mileagePrivateProtected);
+            //myMoto.RacingPrivateProtected();
+            Console.WriteLine("");
+
+            Motorcycle myWifeMoto = new Motorcycle();
+            Console.WriteLine("Public class Motorcycle is accessible everywhere!");
+            //Sportbike mySisterMoto = new AssemblyOne.Sportbike();
+            Console.WriteLine("Internal class Sportbike from other assembly isn't available here");
+            Chopper myCousinMoto = new Chopper();
+            Console.WriteLine("Internal class Chopper from this assembly is accessible here");
         }
     }
 }
