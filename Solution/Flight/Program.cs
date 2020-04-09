@@ -8,8 +8,10 @@ namespace Flight
         {
             Person newPerson = new Person();
             newPerson.Greeting();
-            newPerson.GetFullName();
+            newPerson.GetFullData(ref newPerson);
             newPerson.PersonAccost();
+            Console.WriteLine("Check your personal info!");
+            newPerson.PrintAll();
         }
     }
 }
