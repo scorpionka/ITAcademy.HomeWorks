@@ -6,5 +6,10 @@ namespace Flight
 {
     class CheckIn: Airport
     {
+
+        public void CheckRegistration()
+        {
+
+        }
     }
 }
