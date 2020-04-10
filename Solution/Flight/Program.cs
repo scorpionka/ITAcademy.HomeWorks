@@ -12,6 +12,7 @@ namespace Flight
             newPerson.PersonAccost();
             Console.WriteLine("Check your personal info!");
             newPerson.PrintAll();
+
         }
     }
 }

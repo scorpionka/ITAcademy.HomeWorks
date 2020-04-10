@@ -8,26 +8,8 @@ namespace Flight
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Patronymic { get; set; }
-        private string _accost;
-        public string Accost
-        {
-            get
-            {
-                string[] buildAccost = new string[2];
-                buildAccost[0] = FirstName;
-                if (!Patronymic.Equals(defaultField))
-                {
-                    buildAccost[1] = Patronymic;
-                    _accost = String.Join(" ", buildAccost);
-                }
-                else _accost = buildAccost[0];
-                return _accost;
-            }
-            set
-            {
-                _accost = value;
-            }
-        }
+        public string Accost => $"{FirstName} {Patronymic}";
+        public string AccostNoPatronymic => $"{FirstName}";
         public string PassportData { get; set; }
         public string FlightNumber { get; set; }
 
@@ -133,7 +115,14 @@ namespace Flight
         }
         public void PersonAccost()
         {
-            Console.WriteLine("Dear " + Accost + "!");
+            if (!Patronymic.Equals(defaultField))
+            {
+                Console.WriteLine("Dear " + Accost + "!");
+            }
+            else
+            {
+                Console.WriteLine("Dear " + AccostNoPatronymic + "!");
+            }
         }
     }
 }
