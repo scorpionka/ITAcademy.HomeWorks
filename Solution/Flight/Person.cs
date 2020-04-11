@@ -2,7 +2,7 @@
 
 namespace Flight
 {
-    class Person : Airport
+    public class Person : Airport
     {
         public const string defaultField = "NO_VALUE";
         public string FirstName { get; set; }
@@ -12,7 +12,16 @@ namespace Flight
         public string AccostNoPatronymic => $"{FirstName}";
         public string PassportData { get; set; }
         public string FlightNumber { get; set; }
-
+        readonly private bool registrationStatus;
+        public bool RegistrationStatus { get; set; }
+        public Person(bool regisrationStatus)
+        {
+            this.registrationStatus = registrationStatus;
+        }
+        public bool BaggageStatus { get; set; }
+        public Guid BaggageId { get; set; }
+        public bool HandLuggageStatus { get; set; }
+        public int TerminalNumber { get; set; }
         public Person()
         {
             FirstName = defaultField;
@@ -20,8 +29,8 @@ namespace Flight
             Patronymic = defaultField;
             PassportData = defaultField;
             FlightNumber = defaultField;
+            RegistrationStatus = registrationStatus;
         }
-
         public Person(string lastName, string firstName, string patronymic, string passportData, string flightNumber)
         {
             try
