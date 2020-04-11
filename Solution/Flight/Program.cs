@@ -6,21 +6,23 @@ namespace Flight
     {
         static void Main(string[] args)
         {
-            Person newPerson = new Person("kuzmitski", "aliaksei", "vladimirovich", "mp3634182", "riga140320");
-            Person newPerson1 = new Person("smeyan", "valentsina", "anatolievna", "mc5648512", "tallin240578");
-            newPerson1.AddToBase(newPerson1);
-            newPerson.Greeting();
+            Airport Passengers = new Airport();
+            Person newPersonMe = new Person("kuzmitski", "aliaksei", "vladimirovich", "mp3634182", "riga140320");
+            Person newPersonMom = new Person("smeyan", "valentsina", "anatolievna", "mc5648512", "tallin240578");
+            Passengers.AddToBase(newPersonMe);
+            Passengers.AddToBase(newPersonMom);
+            Passengers.BaseCount();
+            Passengers.BasePrintData();
+            newPersonMe.Greeting();
             //newPerson.GetFullData(ref newPerson);
-            newPerson.PersonAccost();
+            newPersonMe.PersonAccost();
             Console.WriteLine("Check your personal info!");
-            newPerson.PrintAll();
-            newPerson.AddToBase(newPerson);
-            Console.WriteLine(newPerson.Accost + "! Please, follow to the registration desk.");
+            newPersonMe.PrintAll();
+            Console.WriteLine(newPersonMe.Accost + "! Please, follow to the registration desk.");
             Console.WriteLine("\n" + "At the registration desk");
             Console.WriteLine("Show your passport!");
-            //string passportDetails = Console.ReadLine();
-            //CheckIn newCheckInPerson = new CheckIn();
-            //newCheckInPerson.CheckRegistration(passportDetails);
+            string passportDetails = Console.ReadLine();
+            Passengers.CheckRegistration(passportDetails);
 
         }
     }

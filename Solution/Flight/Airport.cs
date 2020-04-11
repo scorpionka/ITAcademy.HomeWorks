@@ -5,11 +5,10 @@ namespace Flight
 {
     public class Airport
     {
-        public List<Person> basePerson = new List<Person>();
+        private protected List<Person> Passengers = new List<Person>();
         public void AddToBase(Person newPerson)
         {
-            Console.WriteLine(basePerson.Count);
-            basePerson.Add(new Person()
+            Passengers.Add(new Person()
             {
                 FirstName = newPerson.FirstName,
                 LastName = newPerson.LastName,
@@ -17,11 +16,33 @@ namespace Flight
                 PassportData = newPerson.PassportData,
                 FlightNumber = newPerson.FlightNumber
             });
-            Console.WriteLine(basePerson.Count);
-            Console.WriteLine();
-            foreach (Person aPerson in basePerson)
+        }
+        public void CheckRegistration(string passportDetails)
+        {
+            try
             {
-                Console.WriteLine(aPerson);
+                passportDetails = passportDetails.ToUpper();
+            }
+            catch { }
+            if (!Passengers.Exists(x => x.PassportData == passportDetails))
+            {
+                Console.WriteLine("No match! Go home!");
+                Environment.Exit(666);
+            }
+            else
+            {
+                Console.WriteLine("It's okay!");
+            }
+        }
+        public void BaseCount()
+        {
+            Console.WriteLine(Passengers.Count);
+        }
+        public void BasePrintData()
+        {
+            foreach (Person aPerson in Passengers)
+            {
+                Console.WriteLine(aPerson.LastName + " " + aPerson.FirstName + " " + aPerson.PassportData + " " + aPerson.FlightNumber);
             }
         }
     }
