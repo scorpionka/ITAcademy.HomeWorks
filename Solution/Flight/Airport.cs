@@ -17,7 +17,19 @@ namespace Flight
                 FlightNumber = newPerson.FlightNumber
             });
         }
-        public Person CheckRegistration(string passportDetails)
+        public void AddToBaseAfterCheckIn(Person newPerson)
+        {
+            passengers.Add(new Person()
+            {
+                RegistrationStatus = newPerson.RegistrationStatus,
+                BoardingPass = newPerson.BoardingPass,
+                BaggageStatus = newPerson.BaggageStatus,
+                BaggageId = newPerson.BaggageId,
+                Terminal = newPerson.Terminal,
+                GateNumber = newPerson.GateNumber,
+            });
+        }
+        public Person CheckPassport(string passportDetails)
         {
             try
             {
@@ -36,6 +48,7 @@ namespace Flight
                 return checkingPerson;
             }
         }
+        //Methods BaseCount() & BasePrintData() for self-tests
         public void BaseCount()
         {
             Console.WriteLine(passengers.Count);
@@ -44,7 +57,17 @@ namespace Flight
         {
             foreach (Person aPerson in passengers)
             {
-                Console.WriteLine(aPerson.LastName + " " + aPerson.FirstName + " " + aPerson.PassportData + " " + aPerson.FlightNumber);
+                Console.WriteLine("Last name: " + aPerson.LastName);
+                Console.WriteLine("First name: " + aPerson.FirstName);
+                Console.WriteLine("Patronymic: " + aPerson.Patronymic);
+                Console.WriteLine("Passport data: " + aPerson.PassportData);
+                Console.WriteLine("Flight number: " + aPerson.FlightNumber);
+                Console.WriteLine("Registration status: " + aPerson.RegistrationStatus);
+                Console.WriteLine("Boarding pass: " + aPerson.BoardingPass);
+                Console.WriteLine("Baggage status: " + aPerson.BaggageStatus);
+                Console.WriteLine("Baggage id: " + aPerson.BaggageId);
+                Console.WriteLine("Terminal: " + aPerson.Terminal);
+                Console.WriteLine("GateNumber: " + aPerson.GateNumber);
             }
         }
     }

@@ -14,14 +14,25 @@ namespace Flight
         public string FlightNumber { get; set; }
         readonly private bool registrationStatus;
         public bool RegistrationStatus { get; set; }
-        public Person(bool regisrationStatus)
-        {
-            this.registrationStatus = registrationStatus;
-        }
+        public Guid BoardingPass { get; set; }
         public bool BaggageStatus { get; set; }
         public Guid BaggageId { get; set; }
-        public bool HandLuggageStatus { get; set; }
-        public int TerminalNumber { get; set; }
+        private char terminal;
+        public char Terminal
+        {
+            get
+            {
+                Char temp = FlightNumber[0];
+                terminal = Char.ToUpper(temp);
+                return terminal;
+            }
+            set
+            {
+                terminal = value;
+            }
+        }
+        readonly private int gateNumber;
+        public int GateNumber { get; set; }
         public Person()
         {
             FirstName = defaultField;
@@ -29,22 +40,37 @@ namespace Flight
             Patronymic = defaultField;
             PassportData = defaultField;
             FlightNumber = defaultField;
+            Random rnd = new Random();
+            int result = rnd.Next(0, 9);
+            if (result <= 4)
+            {
+                registrationStatus = false;
+            }
+            else
+            {
+                registrationStatus = true;
+            }
             RegistrationStatus = registrationStatus;
+            gateNumber = rnd.Next(1, 9);
+            GateNumber = gateNumber;
         }
         public Person(string lastName, string firstName, string patronymic, string passportData, string flightNumber)
         {
             try
             {
+                firstName = firstName.ToLower();
                 FirstName = Char.ToUpper(firstName[0]) + firstName.Substring(1);
             }
             catch { }
             try
             {
+                lastName = lastName.ToLower();
                 LastName = Char.ToUpper(lastName[0]) + lastName.Substring(1);
             }
             catch { }
             try
             {
+                patronymic = patronymic.ToLower();
                 Patronymic = Char.ToUpper(patronymic[0]) + patronymic.Substring(1);
             }
             catch { }
