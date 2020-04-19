@@ -1,0 +1,60 @@
+2020-04-19 23:13:41,331 INFO  HW_11.Program - Program start!
+2020-04-19 23:13:41,340 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:41,340 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:41,340 INFO  HW_11.Program - Square created!
+2020-04-19 23:13:41,341 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:13:41,343 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:13:45,003 INFO  HW_11.Program - Program start!
+2020-04-19 23:13:45,012 INFO  HW_11.Program - Square created!
+2020-04-19 23:13:45,014 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:45,014 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:13:45,015 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:13:45,017 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:13:52,386 INFO  HW_11.Program - Program start!
+2020-04-19 23:13:52,394 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:52,395 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:52,395 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:52,395 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:13:52,398 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:13:55,971 INFO  HW_11.Program - Program start!
+2020-04-19 23:13:55,980 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:13:55,980 INFO  HW_11.Program - Circle created!
+2020-04-19 23:13:55,980 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:13:55,980 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:13:55,983 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:14:00,186 INFO  HW_11.Program - Program start!
+2020-04-19 23:14:00,194 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:00,194 INFO  HW_11.Program - Square created!
+2020-04-19 23:14:00,194 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:00,195 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:14:00,198 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:14:04,070 INFO  HW_11.Program - Program start!
+2020-04-19 23:14:04,078 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:04,078 INFO  HW_11.Program - Square created!
+2020-04-19 23:14:04,078 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:04,079 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:14:04,081 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:14:07,970 INFO  HW_11.Program - Program start!
+2020-04-19 23:14:07,979 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:07,979 INFO  HW_11.Program - Square created!
+2020-04-19 23:14:07,979 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:07,980 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:14:07,982 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:14:11,910 INFO  HW_11.Program - Program start!
+2020-04-19 23:14:11,919 INFO  HW_11.Program - Square created!
+2020-04-19 23:14:11,919 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:11,919 INFO  HW_11.Program - Circle created!
+2020-04-19 23:14:11,920 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:14:11,922 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:14:15,047 INFO  HW_11.Program - Program start!
+2020-04-19 23:14:15,056 INFO  HW_11.Program - Square created!
+2020-04-19 23:14:15,056 INFO  HW_11.Program - Square created!
+2020-04-19 23:14:15,056 INFO  HW_11.Program - Circle created!
+2020-04-19 23:14:15,057 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:14:15,059 INFO  HW_11.Program - Program completed successfully!
+2020-04-19 23:14:18,015 INFO  HW_11.Program - Program start!
+2020-04-19 23:14:18,024 INFO  HW_11.Program - Circle created!
+2020-04-19 23:14:18,024 INFO  HW_11.Program - IsoscelesTriangle created!
+2020-04-19 23:14:18,024 INFO  HW_11.Program - Circle created!
+2020-04-19 23:14:18,025 INFO  HW_11.Program - The process of outputting data to the console has begun!
+2020-04-19 23:14:18,027 INFO  HW_11.Program - Program completed successfully!
