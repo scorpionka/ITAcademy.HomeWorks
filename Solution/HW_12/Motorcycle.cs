@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HW_12
+﻿namespace HW_12
 {
-    class Motorcycle
+    public class Motorcycle
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Model { get; set; }
+        public ushort Year { get; set; }
+        public int Odometer { get; set; }
     }
 }

@@ -1,66 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HW_12
 {
-    public class MotorcycleRepository : IMotorcycleRepository, IDisposable
+    public class MotorcycleRepository : Motorcycle, IMotorcycleRepository
     {
-        private MotoContext context;
-
-        public MotorcycleRepository(MotoContext context)
+        private static List<Motorcycle> motorcycles = new List<Motorcycle>()
         {
-            this.context = context;
+            new Motorcycle{Id = 1, Model = "CBR 600 RA", Name = "Honda", Odometer = 20_000, Year = 2019},
+            new Motorcycle{Id = 2, Model = "XV950 Racer", Name = "Yamaha", Odometer = 30_000, Year = 2018},
+            new Motorcycle{Id = 3, Model = "GSX-S750A", Name = "Suzuki", Odometer = 50_000, Year = 2017},
+            new Motorcycle{Id = 4, Model = "Gear Up 2020", Name = "Ural", Odometer = 10_000, Year = 2020}
+        };
+
+        public IEnumerable<Motorcycle> GetMotorcycles()
+        {
+            return motorcycles;
         }
 
-        public IEnumerable<Motorcycle> GetStudents()
+        public Motorcycle GetMotorcycleByID(int motorcycleID)
         {
-            return context.Motorcycles.ToList();
+            Motorcycle motorcycle = motorcycles.Find(x => x.Equals(Id));
+            return motorcycle != null ? motorcycle : new Motorcycle();
         }
 
-        public Motorcycle GetMotorcycleByID(int id)
+        public void CreateMotorcycle(Motorcycle motorcycle)
         {
-            return context.Motorcycles.Find(id);
-        }
-
-        public void InsertMotorcycle(Motorcycle student)
-        {
-            context.Motorcycles.Add(student);
+            motorcycles.Add(motorcycle);
         }
 
         public void DeleteMotorcycle(int motorcycleID)
         {
-            Motorcycle motorcycle = context.Motorcycles.Find(motorcycleID);
-            context.Motorcycles.Remove(motorcycle);
+            Motorcycle motorcycle = motorcycles.Find(x => x.Equals(Id));
+            motorcycles.Remove(motorcycle);
         }
 
         public void UpdateMotorcycle(Motorcycle motorcycle)
         {
-            context.Entry(motorcycle).State = EntityState.Modified;
-        }
-
-        public void Save()
-        {
-            context.SaveChanges();
-        }
-
-        private bool disposed = false;
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!this.disposed)
-            {
-                if (disposing)
-                {
-                    context.Dispose();
-                }
-            }
-            this.disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            motorcycles.
         }
     }
 }
