@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HW_12
 {
@@ -19,7 +20,7 @@ namespace HW_12
 
         public Motorcycle GetMotorcycleByID(int motorcycleID)
         {
-            Motorcycle motorcycle = motorcycles.Find(x => x.Equals(Id));
+            Motorcycle motorcycle = motorcycles.Find(x => x.Id.Equals(motorcycleID));
             return motorcycle != null ? motorcycle : new Motorcycle();
         }
 
@@ -30,13 +31,31 @@ namespace HW_12
 
         public void DeleteMotorcycle(int motorcycleID)
         {
-            Motorcycle motorcycle = motorcycles.Find(x => x.Equals(Id));
-            motorcycles.Remove(motorcycle);
+            if (motorcycles.Exists(x => x.Id.Equals(motorcycleID)))
+            {
+                Motorcycle motorcycle = motorcycles.Find(x => x.Id.Equals(motorcycleID));
+                motorcycles.Remove(motorcycle);
+            }
         }
 
         public void UpdateMotorcycle(Motorcycle motorcycle)
         {
-            motorcycles.
+            if (motorcycles.Exists(x => x.Id.Equals(motorcycle.Id)))
+            {
+                Motorcycle motorcycleForUpdate = motorcycles.Find(x => x.Id.Equals(motorcycle.Id));
+                motorcycleForUpdate.Model = motorcycle.Model;
+                motorcycleForUpdate.Name = motorcycle.Name;
+                motorcycleForUpdate.Odometer = motorcycle.Odometer;
+                motorcycleForUpdate.Year = motorcycle.Year;
+            }
+        }
+        public void PrintMotorcycleRepository(MotorcycleRepository motorcycles)
+        {
+            foreach (var aMotorcycle in motorcycles.GetMotorcycles())
+            {
+                Console.WriteLine($"Id = {aMotorcycle.Id}, Name = {aMotorcycle.Name}, Model = {aMotorcycle.Model}, " +
+                    $"Odometer = {aMotorcycle.Odometer}, Year = {aMotorcycle.Year}");
+            }
         }
     }
 }
