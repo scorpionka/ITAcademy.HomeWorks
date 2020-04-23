@@ -1,0 +1,14 @@
+2020-04-23 06:58:25,881 INFO  HW_12.Program - Program start!
+2020-04-23 06:58:25,890 INFO  HW_12.Program - Repository created!
+2020-04-23 06:58:25,893 INFO  HW_12.Program - New motorcycle information added!
+2020-04-23 06:58:25,893 INFO  HW_12.Program - Motorcycle information received!
+2020-04-23 06:58:25,894 INFO  HW_12.Program - Motocycle information deleted!
+2020-04-23 06:58:25,895 INFO  HW_12.Program - Motocycle information updated!
+2020-04-23 06:58:25,895 INFO  HW_12.Program - The program is completed!
+2020-04-23 06:58:58,050 INFO  HW_12.Program - Program start!
+2020-04-23 06:58:58,058 INFO  HW_12.Program - Repository created!
+2020-04-23 06:58:58,061 INFO  HW_12.Program - New motorcycle information added!
+2020-04-23 06:58:58,061 INFO  HW_12.Program - Motorcycle information received!
+2020-04-23 06:58:58,062 INFO  HW_12.Program - Motocycle information deleted!
+2020-04-23 06:58:58,063 INFO  HW_12.Program - Motocycle information updated!
+2020-04-23 06:58:58,063 INFO  HW_12.Program - The program is completed!
